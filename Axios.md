@@ -1,3 +1,7 @@
+# Doc
+
+https://github.com/axios/axios
+
 # Install
 
 ````
@@ -35,3 +39,7 @@ axios.get(url)
     });   
 },        
 ````
+
+# Progress Bar
+
+* https://www.htmlgoodies.com/beyond/php/show-progress-report-for-long-running-php-scripts.html
