@@ -26,3 +26,5 @@ From [Simple and Easy Laravel Routing
     }));
 
 ````
+
+Also https://www.packtpub.com/mapt/book/web_development/9781786462084/4/ch04lvl1sec33/adding-a-static-page
