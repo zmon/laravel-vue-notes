@@ -27,4 +27,8 @@ From [Simple and Easy Laravel Routing
 
 ````
 
-Also https://www.packtpub.com/mapt/book/web_development/9781786462084/4/ch04lvl1sec33/adding-a-static-page
+
+
+Also 
+* [A Laravel controller to serve Static pages](https://gist.github.com/juliobitencourt/3693d9eefad5fd1e0a57)
+* https://www.packtpub.com/mapt/book/web_development/9781786462084/4/ch04lvl1sec33/adding-a-static-page
