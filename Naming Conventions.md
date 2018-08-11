@@ -4,6 +4,7 @@
 * Method names MUST be declared in camelCase().
 * Class constants MUST be declared in all upper case with underscore 
 
+````
 <?php
 namespace Vendor\Model;
 
