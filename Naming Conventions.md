@@ -1,7 +1,53 @@
+#
 
-From Stack Exchange:
+* Class names MUST be declared in StudlyCaps.
+* Method names MUST be declared in camelCase().
+* Class constants MUST be declared in all upper case with underscore 
+
+<?php
+namespace Vendor\Model;
+
+class StudlyCaps
+{
+    const VERSION = '1.0';
+    const DATE_APPROVED = '2012-06-01';
+    
+    function camelCase() {
+        // function body
+    }
+}
+
+
+namespace Vendor\Package;
+
+use FooInterface;
+use BarClass as Bar;
+use OtherVendor\OtherPackage\BazClass;
+
+class Foo extends Bar implements FooInterface
+{
+    public function sampleMethod($a, $b = null)
+    {
+        if ($a === $b) {
+            bar();
+        } elseif ($a > $b) {
+            $foo->bar($arg1);
+        } else {
+            BazClass::bar($arg2, $arg3);
+        }
+    }
+
+    final public static function bar()
+    {
+        // method body
+    }
+}
+````
+
+
 
 # [How can we teach good naming practice for students learning Java?](https://cseducators.stackexchange.com/questions/4594/how-can-we-teach-good-naming-practice-for-students-learning-java)
+From Stack Exchange:
 
 The following is from the above:
 
