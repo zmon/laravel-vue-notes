@@ -45,6 +45,30 @@ class Foo extends Bar implements FooInterface
 }
 ````
 
+# Vue
+
+From [HTML case sensitivity workaround #2308](https://github.com/vuejs/vue/issues/2308) 
+
+So as we all know, HTML is case insensitive. myProp="123" gets parsed as myprop="123" and this has led to the caveat in Vue.js where you have to use my-prop="123" to refer to a prop declared in JavaScript as myProp. This bites beginners quite often.
+
+In addition, we also need to apply the same mapping to custom components - e.g. when you define a component:
+
+````
+import MyComponent from './my-component'
+
+export default {
+  components: {
+    MyComponent // es2015 shorhand
+  }
+}
+````
+You must use <my-component> in the template instead of <MyComponent>.
+
+Ohter Notes:
+
+* https://vuejs.org/v2/guide/components-props.html
+* https://vuejs.org/v2/style-guide/
+
 
 
 # [How can we teach good naming practice for students learning Java?](https://cseducators.stackexchange.com/questions/4594/how-can-we-teach-good-naming-practice-for-students-learning-java)
