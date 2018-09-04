@@ -52,7 +52,7 @@ public function down()
         
         Schema::table('work_order_types', function ($table) {
             $table->dropColumn('mark_mowed_sequence');
-        }
+        });
 
     }
     
