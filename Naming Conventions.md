@@ -47,6 +47,11 @@ class Foo extends Bar implements FooInterface
 
 # Vue
 
+From Class
+
+````
+FileName.vue  - filenames are 
+
 From [HTML case sensitivity workaround #2308](https://github.com/vuejs/vue/issues/2308) 
 
 So as we all know, HTML is case insensitive. myProp="123" gets parsed as myprop="123" and this has led to the caveat in Vue.js where you have to use my-prop="123" to refer to a prop declared in JavaScript as myProp. This bites beginners quite often.
