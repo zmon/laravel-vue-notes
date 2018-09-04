@@ -49,6 +49,10 @@ public function down()
     {
 
         Schema::drop('work_order_costs');
+        
+        Schema::table('work_order_types', function ($table) {
+            $table->dropColumn('mark_mowed_sequence');
+        }
 
     }
     
