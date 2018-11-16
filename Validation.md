@@ -1,6 +1,18 @@
 # Rules to check if unique with two fields
 Testing in city_neighborhood
 
+## Testing
+Best to have a model that has two fields that have validation for two fields
+
+Using City Neighborhoods which has a name, short name, and alias fields that should be unique with in each organization.
+
+Seq | Description                           | Action                   | Result
+--- | ------------------------------------- | ------------------------ | ------------
+1.  | Does not exist in eather organization | Add record 'A', 'A', 'A' | Adds record
+2.  | Exist in current organization | Add record 'A', 'A', 'A' | All fields fail
+
+## Notes
+
 Best way for far
 
 https://laravel.com/docs/5.4/validation#rule-unique
