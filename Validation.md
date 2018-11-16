@@ -1,10 +1,20 @@
 # Rules to check if unique with two fields
 
+Undocumented format
+
+https://stackoverflow.com/questions/50349775/laravel-unique-validation-on-multiple-columns
+
+````
+table[,column[,ignore value[,ignore column[,where column,where value]...]]]
+````
+
 ## Add
 ````
         $this->validate($request, [
 
-            'name' => 'required|string|max:60|unique:owners,name,null,name,organization_id,' . intval(session('organization_id', null)) . ',name,' . $request->name,
+            'name' => 'required|string|max:60|unique:city_neighborhoods,name,null,name,organization_id,' . intval(session('organization_id', null)) . ',name,' . $request->name,
+             'short_name' => 'required|string|max:60|unique:city_neighborhoods,short_name,null,name,organization_id,' . intval(session('organization_id', null)) . ',name,' . $request->short_name,
+           
 
         ], $this->messages);
 ````
