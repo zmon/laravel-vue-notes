@@ -1,4 +1,9 @@
 # Rules to check if unique with two fields
+Testing in city_neighborhood
+
+Best way for far
+
+https://laravel.com/docs/5.4/validation#rule-unique
 
 Undocumented format
 
@@ -21,8 +26,20 @@ table[,column[,ignore value[,ignore column[,where column,where value]...]]]
 ##  Change
 ````
         $this->validate($request, [
-
-            'name' => 'required|string|max:60|unique:owners,name,' . $request->name . ',name,organization_id,' . intval(session('organization_id', null)) . ',name,' . $request->name,
+            'name' => [
+                'required',
+                'string',
+                'max:60',
+                Rule::unique('city_neighborhoods')->ignore($id)->where(function ($query) use ($organization_id) {
+                    return $query->where('organization_id', $organization_id);
+                })],
+            'short_name' => [
+                'required',
+                'string',
+                'max:60',
+                Rule::unique('city_neighborhoods')->ignore($id)->where(function ($query) use ($organization_id) {
+                    return $query->where('organization_id', $organization_id);
+                })],
 
         ], $this->messages);
 ````
