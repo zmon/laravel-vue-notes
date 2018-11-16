@@ -5,11 +5,16 @@ Testing in city_neighborhood
 Best to have a model that has two fields that have validation for two fields
 
 Using City Neighborhoods which has a name, short name, and alias fields that should be unique with in each organization.
+Records 'B', 'B, 'B' and 'C', 'C', 'C' and 'D', 'D', 'D' exist in the other organization.
 
 Seq | Description                           | Action                   | Result
 --- | ------------------------------------- | ------------------------ | ------------
-1.  | Does not exist in eather organization | Add record 'A', 'A', 'A' | Adds record
-2.  | Exist in current organization | Add record 'A', 'A', 'A' | All fields fail
+1   | Does not exist in eather organization | Add record 'A', 'A', 'A' | Adds record
+2   | Exist in current organization | Add record 'A', 'A', 'A' | All fields fail
+3   | Exist only in other organization | Add record 'B', 'B, 'B' | Adds record
+4   | Exist in both organizations | Add record 'B', 'B, 'B' | All fields fail
+5   | Exist in both organizations Change | Change record 'B' to 'C', 'B' , 'C' | Changes record
+
 
 ## Notes
 
