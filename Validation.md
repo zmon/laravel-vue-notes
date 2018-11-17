@@ -2,7 +2,7 @@
 Testing in city_neighborhood
 
 ## Testing
-Best to have a model that has two fields that have validation for two fields
+Best to have a model that has two fields that have validation for two fields:
 
 Using City Neighborhoods which has a name, short name, and alias fields that should be unique with in each organization.
 Records 'B', 'B, 'B' and 'C', 'C', 'C' and 'D', 'D', 'D' exist in the other organization.
