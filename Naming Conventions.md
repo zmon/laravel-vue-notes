@@ -49,7 +49,7 @@ class Foo extends Bar implements FooInterface
 
 From Class
 
-````
+
 FileName.vue  - filenames are 
 
 From [HTML case sensitivity workaround #2308](https://github.com/vuejs/vue/issues/2308) 
