@@ -263,14 +263,16 @@ Different DOM types
 ````
 
 
-Non-empty HTML attribute values should always be inside quotes (single or double, whichever is not used in JS).
+### Non-empty HTML attribute
+Values should always be inside quotes (single or double, whichever is not used in JS).
 
 ````
 <input type="text">
 <AppSidebar :style="{ width: sidebarWidth + 'px' }">
 ````
 
-Directive shorthands (: for v-bind: and @ for v-on:) should be used always or never.
+### Directive shorthands 
+(: for v-bind: and @ for v-on:) should be used always or never.
 
 ````
 <input
