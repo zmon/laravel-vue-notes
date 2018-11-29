@@ -47,10 +47,17 @@ class Foo extends Bar implements FooInterface
 
 # Vue
 
-From Class
+## Components
 
+Sdd https://vuejs.org/v2/style-guide/
 
-FileName.vue  - filenames are 
+File names are
+* PascalCase
+* Multi Word except for root App components. This prevents conflicts with existing and future HTML elements, since all HTML elements are a single word.
+
+````
+MyComponent.vue
+````
 
 From [HTML case sensitivity workaround #2308](https://github.com/vuejs/vue/issues/2308) 
 
@@ -59,7 +66,7 @@ So as we all know, HTML is case insensitive. myProp="123" gets parsed as myprop=
 In addition, we also need to apply the same mapping to custom components - e.g. when you define a component:
 
 ````
-import MyComponent from './my-component'
+import MyComponent from './MyComponent'
 
 export default {
   components: {
@@ -74,6 +81,135 @@ Ohter Notes:
 * https://vuejs.org/v2/guide/components-props.html
 * https://vuejs.org/v2/style-guide/
 
+### Single File Component Layout
+
+````
+<template>...</template>
+<script>/* ... */</script>
+<style>/* ... */</style>
+````
+
+### Data
+
+Component data must be a function.
+
+````
+// In a .vue file
+export default {
+  data () {
+    return {
+      foo: 'bar'
+    }
+  }
+}
+````
+
+### Prop definitions
+
+Prop names should always use camelCase during declaration, but kebab-case in templates and JSX.
+
+````
+props: {
+  greetingText: String
+}
+
+
+<WelcomeMessage greeting-text="hi"/>
+````
+
+
+Should be as detailed as possible
+
+````
+props: {
+  status: String
+}
+// Even better!
+props: {
+  status: {
+    type: String,
+    required: true,
+    validator: function (value) {
+      return [
+        'syncing',
+        'synced',
+        'version-conflict',
+        'error'
+      ].indexOf(value) !== -1
+    }
+  }
+}
+````
+
+
+Elements with multiple attributes should span multiple lines, with one attribute per line.
+
+````
+<img
+  src="https://vuejs.org/images/logo.png"
+  alt="Vue Logo"
+>
+<MyComponent
+  foo="a"
+  bar="b"
+  baz="c"
+/>
+````
+
+### Computed Properties
+
+Complex computed properties should be split into as many simpler properties as possible.
+
+````
+computed: {
+  basePrice: function () {
+    return this.manufactureCost / (1 - this.profitMargin)
+  },
+  discount: function () {
+    return this.basePrice * (this.discountPercent || 0)
+  },
+  finalPrice: function () {
+    return this.basePrice - this.discount
+  }
+}
+````
+
+## Template
+
+### Keyed v-for
+Always use key with v-for.
+
+````
+<ul>
+  <li
+    v-for="todo in todos"
+    :key="todo.id"
+  >
+    {{ todo.text }}
+  </li>
+</ul>
+````
+
+Non-empty HTML attribute values should always be inside quotes (single or double, whichever is not used in JS).
+
+````
+<input type="text">
+<AppSidebar :style="{ width: sidebarWidth + 'px' }">
+````
+
+Directive shorthands (: for v-bind: and @ for v-on:) should be used always or never.
+
+````
+<input
+  v-bind:value="newTodoText"
+  v-bind:placeholder="newTodoInstructions"
+>
+
+<input
+  v-on:input="onInput"
+  v-on:focus="onFocus"
+>
+````
 
 
 # [How can we teach good naming practice for students learning Java?](https://cseducators.stackexchange.com/questions/4594/how-can-we-teach-good-naming-practice-for-students-learning-java)
