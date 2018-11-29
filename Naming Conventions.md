@@ -174,6 +174,47 @@ computed: {
 }
 ````
 
+
+### Implicit parent-child communication USE WITH CAUTION
+Props and events should be preferred for parent-child component communication, instead of this.$parent or mutating props.
+
+````
+Vue.component('TodoItem', {
+  props: {
+    todo: {
+      type: Object,
+      required: true
+    }
+  },
+  template: `
+    <input
+      :value="todo.text"
+      @input="$emit('input', $event.target.value)"
+    >
+  `
+})
+Vue.component('TodoItem', {
+  props: {
+    todo: {
+      type: Object,
+      required: true
+    }
+  },
+  template: `
+    <span>
+      {{ todo.text }}
+      <button @click="$emit('delete')">
+        X
+      </button>
+    </span>
+  `
+})
+````
+
+### Style
+
+Element selectors should be avoided with scoped.
+
 ## Template
 
 ### Keyed v-for
@@ -189,6 +230,38 @@ Always use key with v-for.
   </li>
 </ul>
 ````
+
+### v-if/v-else-if/v-else without key USE WITH CAUTION
+It’s usually best to use key with v-if + v-else, if they are the same element type (e.g. both <div> elements).
+
+By default, Vue updates the DOM as efficiently as possible. That means when switching between elements of the same type, it simply patches the existing element, rather than removing it and adding a new one in its place. This can have unintended side effects if these elements should not actually be considered the same.
+
+````
+<div
+  v-if="error"
+  key="search-status"
+>
+  Error: {{ error }}
+</div>
+<div
+  v-else
+  key="search-results"
+>
+  {{ results }}
+</div>
+````
+
+Different DOM types
+
+````
+<p v-if="error">
+  Error: {{ error }}
+</p>
+<div v-else>
+  {{ results }}
+</div>
+````
+
 
 Non-empty HTML attribute values should always be inside quotes (single or double, whichever is not used in JS).
 
