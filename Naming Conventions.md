@@ -1,4 +1,5 @@
-#
+# Laravel
+
 
 * Class names MUST be declared in StudlyCaps.
 * Method names MUST be declared in camelCase().
@@ -47,9 +48,9 @@ class Foo extends Bar implements FooInterface
 
 # Vue
 
-## Components
+Most of this is taken from https://vuejs.org/v2/style-guide/
 
-Sdd https://vuejs.org/v2/style-guide/
+## Components
 
 File names are
 * PascalCase
@@ -84,9 +85,44 @@ Ohter Notes:
 ### Single File Component Layout
 
 ````
-<template>...</template>
-<script>/* ... */</script>
-<style>/* ... */</style>
+<template>
+    
+</template>
+
+<script>
+    import SsGridColumnHeader from "./SsGridColumnHeader";
+    import SsGridPagination from "./SsGridPagination";
+    import SsGridPaginationLocation from "./SsPaginationLocation";
+    
+    export default {
+        name: "test",
+        components: {SsGridColumnHeader, SsGridPaginationLocation, SsGridPagination},
+        model: {
+            prop: 'checked',
+            event: 'change'
+        },
+        props: {
+            checked: Boolean
+        },
+        mounted: function () {
+
+        },
+        data () {
+            return {
+                foo: 'bar'
+            }
+        },
+        methods: {
+            goToNew: function () {
+                window.location.href = '/organization/create';
+            },
+        }
+    }
+</script>
+
+<style scoped>  // bad
+
+</style>
 ````
 
 ### Data
@@ -103,6 +139,24 @@ export default {
   }
 }
 ````
+
+### How to handle static properties
+NOT TESTED - I di not know if this works with what I have created.
+
+From https://itnext.io/how-not-to-vue-18f16fe620b5
+
+There are no reason to pass static properties to data and especially in computed. When you do it, Vue makes these properties reactive but it’s unnecessary.
+
+````
+export default {
+    phone: 799999999999,
+    city: 'kcmo'
+}
+
+componet.$options.phone,
+component.$options.city
+````
+
 
 ### Prop definitions
 
@@ -140,6 +194,8 @@ props: {
   }
 }
 ````
+
+Validation, see https://monterail.github.io/vuelidate/
 
 
 Elements with multiple attributes should span multiple lines, with one attribute per line.
