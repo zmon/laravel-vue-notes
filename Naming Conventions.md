@@ -98,8 +98,8 @@ Ohter Notes:
         name: "test",
         components: {SsGridColumnHeader, SsGridPaginationLocation, SsGridPagination},
         model: {
-            prop: 'checked',
-            event: 'change'
+            prop: 'value',
+            event: 'input'
         },
         props: {
             checked: Boolean
