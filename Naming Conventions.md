@@ -107,10 +107,26 @@ Ohter Notes:
         mounted: function () {
 
         },
+        updated: function () {          // Not used much
+            this.$nextTick(function () {
+                // Code that will run only after the
+                // entire view has been re-rendered
+             )
+        },
         data () {
             return {
                 foo: 'bar'
             }
+        },
+        watch: {
+            current_page: function () {
+                this.resetPageNumbers();
+            },
+        },
+        computed: {
+            next_page_number() {
+                return this.current_page < this.last_page ? this.current_page + 1 : null;
+            },
         },
         methods: {
             goToNew: function () {
