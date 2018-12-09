@@ -1,0 +1,15 @@
+````
+            $invoice_pdf_id = 0;
+
+            $filename = $invoice->invoice_pdf_filename;
+
+            if ($bucket_type = env('INV_BUCKET_TYPE', 'local')) {
+                
+                if (Storage::disk($bucket_type)->exists($filename) ) {
+                    $invoice_pdf_id = $invoice->id;
+                } else {
+                    $invoice_pdf_id = 0;
+                }
+
+            }
+````
