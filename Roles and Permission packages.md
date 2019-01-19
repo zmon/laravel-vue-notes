@@ -12,7 +12,7 @@ CLI | Yes | Only to clean unassigned and orphaned abilities
 Unit Testing | Helps |
 Database Seeding | example |
 Extending | Yes |
-Cache | Yes | Yes - Auto
+Cache | Yes | Yes - Auto **NOTE:** fid not file or database cache drivers.
 Cache Refreash |  | Yes, and per user 
 User can own a model | ? | Yes
 Multi-tenancy | | Yes - using Scope Middleware
