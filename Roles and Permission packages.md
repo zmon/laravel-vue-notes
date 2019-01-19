@@ -15,7 +15,7 @@ Extending | Yes |
 Cache | Yes | Yes - Auto **NOTE:** fid not file or database cache drivers.
 Cache Refreash |  | Yes, and per user 
 User can own a model | ? | Yes
-Multi-tenancy | | Yes - using Scope Middleware
+Multi-tenancy | See [A full-featured multi-tenant app with Laravel Part 2 — Roles and Permissions](https://medium.com/@ashokgelal/a-full-featured-multi-tenant-app-with-laravel-part-2-roles-and-permissions-d9a5bfe5d525) and issue[Question: Multi Tenant #280](https://github.com/spatie/laravel-permission/issues/280) both work arounds. | Yes - using Scope Middleware
 Can change internal table names | no | Yes
 
 
