@@ -8,11 +8,17 @@ Developer | Spatie is a web design agency in Antwerp, Belgium. | -
 **Multiple Gards** multiple guards they will act like namespaces for your permissions and roles. Meaning every guard has its own set of permissions and roles that can be assigned to their user model.| Yes |
 Uses default `can` | Yes | 
 Dependecies | Lumen | 
-CLI | Yes |
+CLI | Yes | Only to clean unassigned and orphaned abilities
 Unit Testing | Helps |
 Database Seeding | example |
 Extending | Yes |
-Cache | Yes |
+Cache | Yes | Yes - Auto
+Cache Refreash |  | Yes, and per user 
+User can own a model | ? | Yes
+Multi-tenancy | | Yes - using Scope Middleware
+Can change internal table names | no | Yes
+
+
 
 
 
