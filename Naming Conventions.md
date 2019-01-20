@@ -17,6 +17,7 @@ Type |Name | Filename | Artisan Command
 Table Name | photos | 
 Model | Photo | `app/Photo.php` | `php artisan make:model Photo --migration`
 Migration | CreatePhotosTable | `database/migrations/2019_01_20_054849_create_photos_table.php` | `php artisan make:model Photo --migration`
+  | . | . | php artisan make:migration  --create=photos Photo
 Controler | PhotoController  | `app/Http/Controllers/PhotoController.php` | `php artisan make:controller PhotoController --resource --model=Photo`
 
 
