@@ -1,5 +1,26 @@
 # Laravel
 
+## Models
+
+For the `flights` table!
+
+````
+php artisan make:model Flight
+
+<?php
+
+namespace App;
+
+use Illuminate\Database\Eloquent\Model;
+
+class Flight extends Model
+{
+    //
+}
+````
+
+
+
 
 * Class names MUST be declared in StudlyCaps.
 * Method names MUST be declared in camelCase().
