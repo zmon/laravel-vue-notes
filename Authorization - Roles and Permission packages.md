@@ -1,6 +1,8 @@
 
 Should review [Laravel's Authorization](https://laravel.com/docs/5.7/authorization) about Gates and Policies.  looks like gate is what i am looking for.
 
+Another article on Policies [An Introduction to Laravel Policy - Laravel School](http://laravel-school.com/posts/an-introduction-to-laravel-policy-15?ref=laravelnews)
+
 The article [Two Best Laravel Packages to Manage Roles/Permissions](https://laravel-news.com/two-best-roles-permissions-packages) lead me to
 the following comparision.
 
