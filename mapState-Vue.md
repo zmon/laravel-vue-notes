@@ -1,6 +1,6 @@
 # mapState Vue
 
-The following was found in https://forum.vuejs.org/t/dont-understand-how-to-use-mapstate-from-the-docs/14454/11
+The following was found in [Don’t understand how to use mapState from the docs](https://forum.vuejs.org/t/dont-understand-how-to-use-mapstate-from-the-docs/14454/11)
 by [LinusBorg](https://forum.vuejs.org/u/LinusBorg)
 
 given this state:
