@@ -1,0 +1,26 @@
+I have seen where the data was passed in the HTML headers...
+
+## HTML
+
+```
+@if($batch_property_field_errors->count() > 0)
+    <batch-error-grid :messages='{!! json_encode($batch_property_field_errors,JSON_HEX_APOS) !!}'
+                      batchid="{{ $batch->id }}"
+                      csrf-field="{{ csrf_token() }}">
+    </batch-error-grid>
+@endif
+```
+
+## Vue Component
+
+```
+<script>
+  export default {
+    name: "batch-error-grid",
+    props: ['batchid', 'messages', 'csrfField'],
+    mounted() {
+      console.dir(this.batchid);
+    }
+  }
+</script>
+```
