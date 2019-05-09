@@ -22,6 +22,7 @@ Cache Refreash | Yes, refresh 24th or permission or roles are updated  | Yes, an
 User can own a model | ? | Yes
 Multi-tenancy | See [A full-featured multi-tenant app with Laravel Part 2 — Roles and Permissions](https://medium.com/@ashokgelal/a-full-featured-multi-tenant-app-with-laravel-part-2-roles-and-permissions-d9a5bfe5d525) and issue[Question: Multi Tenant #280](https://github.com/spatie/laravel-permission/issues/280) both work arounds. | Yes - using Scope Middleware
 Can change internal table names | no | Yes
+UI | no | no
 
 
 
