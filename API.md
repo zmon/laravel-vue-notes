@@ -5,6 +5,7 @@ https://medium.com/techcompose/create-rest-api-in-laravel-with-authentication-us
 See 
 * [Eloquent: API Resources](https://laravel.com/docs/5.6/eloquent-resources)
 * [API Authentication (Passport)](https://laravel.com/docs/5.6/passport)
+* List of codes and references source of [Laravel HTTP status code](https://gist.github.com/jeffochoa/a162fc4381d69a2d862dafa61cda0798)
 
 
 The following is from: https://www.toptal.com/laravel/restful-laravel-api-tutorial
