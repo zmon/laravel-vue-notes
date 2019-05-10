@@ -1,3 +1,7 @@
+Very easy todo:   [Simple Vuejs Code Splitting in Laravel with Webpack/Laravel Mix \| Channing Defoe](http://channingdefoe.com/vuejs-code-splitting-in-laravel-webpack/)
+
+#### Old notes
+
 * [The WebPack Doc](https://webpack.js.org/guides/code-splitting/)
 
 * [A Vue pattern for idiomatic, performant component registration you might not know about
