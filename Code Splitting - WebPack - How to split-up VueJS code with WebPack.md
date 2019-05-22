@@ -1,5 +1,7 @@
 Very easy todo:   [Simple Vuejs Code Splitting in Laravel with Webpack/Laravel Mix \| Channing Defoe](http://channingdefoe.com/vuejs-code-splitting-in-laravel-webpack/)
 
+Reduce size:  [How to Reduce Your Vue.JS Bundle Size With Webpack](https://medium.com/js-dojo/how-to-reduce-your-vue-js-bundle-size-with-webpack-3145bf5019b7)
+
 #### Old notes
 
 * [The WebPack Doc](https://webpack.js.org/guides/code-splitting/)
