@@ -24,6 +24,7 @@ We’ve also added the response()->json() call to our endpoints. This lets us ex
 401: Unauthorized. The user needs to be authenticated.
 403: Forbidden. The user is authenticated, but does not have the permissions to perform an action.  _Form Request will return this if the user is not authorized_
 404: Not found. This will be returned automatically by Laravel when the resource is not found.
+419: Illuminate\Auth\AuthenticationException: Unauthenticated. PDB 15-Jun-2019
 500: Internal server error. Ideally you're not going to be explicitly returning this, but if something unexpected breaks, this is what your user is going to receive.
 503: Service unavailable. Pretty self explanatory, but also another code that is not going to be returned explicitly by the application.
 Sending a Correct 404 Response
