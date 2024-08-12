@@ -1,5 +1,25 @@
 # Notes when having problems installing MySQL with Brew
 
+### Background: Fresh mysql/mariadb installed by homebrew.
+
+### Problem: The password for root is not empty and unknown.
+
+### The fix:
+
+mysql -u `whoami` -p
+The password is empty (press enter)
+ALTER USER 'root'@'localhost' IDENTIFIED BY 'NEW-ROOT-PASSWORD';
+FLUSH PRIVILEGES;
+
+### The reason:
+
+Homebrew will create a user with root privileges named by the current MacOS username.
+it has no password
+Since it has all privileges, just reset the root password with that user.
+The initial password for root was randomly generated.
+
+
+
 ## Install
 
 brew update
