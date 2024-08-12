@@ -107,3 +107,10 @@ mysqladmin -u root password NEWPASS
 
 
 
+ALTER USER 'root'@'localhost' IDENTIFIED WITH caching_sha2_password BY 'my-password-five';
+flush  FLUSH PRIVILEGES;
+
+
+
+
+
