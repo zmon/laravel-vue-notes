@@ -26,7 +26,6 @@ The initial password for root was randomly generated.
 ## Install
 
 brew update
-# brew doctor
 brew install mysql@8.0
 
 ```
