@@ -24,10 +24,10 @@ The initial password for root was randomly generated.
 
 
 ## Install
-
+```
 brew update
 brew install mysql@8.0
-
+```
 ```
 We've installed your MySQL database without a root password. To secure it run:
 
