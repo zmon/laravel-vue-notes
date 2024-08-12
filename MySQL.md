@@ -5,11 +5,14 @@
 ### Problem: The password for root is not empty and unknown.
 
 ### The fix:
-
-mysql -u `whoami` -p
+```
+   mysql -u `whoami` -p
+```   
 The password is empty (press enter)
-ALTER USER 'root'@'localhost' IDENTIFIED BY 'NEW-ROOT-PASSWORD';
-FLUSH PRIVILEGES;
+```
+   ALTER USER 'root'@'localhost' IDENTIFIED BY 'NEW-ROOT-PASSWORD';
+   FLUSH PRIVILEGES;
+```
 
 ### The reason:
 
